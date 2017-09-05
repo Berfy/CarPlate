@@ -1,49 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.aiseminar.platerecognizer.ui.CameraActivity">
+    android:orientation="vertical">
 
-    <SurfaceView
+    <com.wlb.pndecoder.view.TitleBar
+        android:id="@+id/titleBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/svCamera"
-        android:layout_gravity="center" />
+        android:layout_height="@dimen/dp_50"></com.wlb.pndecoder.view.TitleBar>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivCapturePhoto"
-        android:layout_gravity="center_horizontal|bottom"
-        android:src="@drawable/capture_photo"
-        android:layout_marginBottom="20dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp">
+        <SurfaceView
+            android:id="@+id/svCamera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
 
-        <ImageView
-            android:layout_width="136dp"
-            android:layout_height="48dp"
-            android:id="@+id/ivPlateRect"
-            android:layout_gravity="center"
-            android:src="@drawable/plate_rect"
-            android:contentDescription="@string/plate_rect" />
+        <FrameLayout
+            android:id="@+id/fragment_camera2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></FrameLayout>
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/layout_scan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="拍照识别车牌"
-            android:id="@+id/tvPlateResult"
-            android:layout_gravity="center"
-            android:textColor="@android:color/holo_red_light"
-            android:layout_marginTop="8dp"
-            android:textStyle="bold" />
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
 
-    </LinearLayout>
+            android:orientation="vertical">
 
-</FrameLayout>
+            <ImageView
+                android:id="@+id/ivPlateRect"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/plate_rect"
+                android:contentDescription="@string/plate_rect" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_scan"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <ToggleButton
+                android:id="@+id/toggle_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_selector"
+                android:checked="false"
+                android:textColor="@color/white"
+                android:textOff="打开闪光灯"
+                android:textOn="关闭闪光灯" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

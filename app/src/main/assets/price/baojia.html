@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>我来保</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        label{
+            font-weight: 500;
+        }
+        .table-striped>tbody>tr:nth-of-type(odd){
+            background: #f2f8ff;
+        }
+        .readonly td:nth-child(2),.readonly td:nth-child(3){
+            position: relative;
+        }
+        .readonly td:nth-child(2):before,.readonly td:nth-child(3):before{
+            display: block;
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 200;
+        }
+    </style>
+</head>
+<body>
+<form action="" class="form-horizontal" name="priceForm" id="priceForm" style="display: none;" >
+    <div class="form-group row">
+        <div class="col-xs-4 control-label">车主姓名</div>
+        <div class="col-xs-8">
+            <p type="date" class="" id="name"></p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-4 control-label">商业险截止日期</div>
+        <div class="col-xs-8">
+            <p type="date" value="" name="businessExpiredDateStr" class=".B" id="Bdeadline"></p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-4 control-label">交强险截止日期</div>
+        <div class="col-xs-8">
+            <p type="date" value="" name="vehicleExpiredDateStr" class=".A" id="Adeadline"></p>
+
+        </div>
+    </div>
+    <input type="hidden" name="vehicleId" id="vehicleId" value="" readonly="readonly"/>
+    <input type="hidden" name="regionCode" id="regionCode" value="" readonly="readonly"/>
+    <input type="hidden" name="companyCode" id="" value="rb" readonly="readonly"/>
+    <table class="table table-striped" id="wrapper">
+    </table>
+    <div class="btn btn-danger btn-lg btn-block" id="upDate">
+        立即报价
+    </div>
+</form>
+<div class="loadings" style="display: none;width: 100vw;height: 100vh;background-size:50%;position: fixed;top: 0;left: 0;z-index: 200;font-size: 24px;font-weight: 600;color: red">
+    <p style="margin: 30vh auto;text-align: center">
+        <span id="num">
+            1
+        </span>/6
+    </p>
+</div>
+
+<input type="hidden" id="text1" value="">
+<input type="hidden" id="text2" value="">
+<input type="hidden" id="token" value="">
+<script src="js/jquery.js"></script>
+<script src="js/server.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/common.js"></script>
+<script src="js/wlbrequest.js"></script>
+<script src="js/jquery.serializejson.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/handlebars.min.js"></script>
+<script type="text/x-handlebars-template" id="list">
+    {{#with this}}
+        <thead style="background: #d9eaff">
+            <td width="30%">车险种类</td>
+            <td width="22%">保额</td>
+            <td width="23%">保费</td>
+            <td width="25%">不计免赔</td>
+        </thead>
+        <tbody>
+           {{#with vehicle}}
+           <tr class="insurance">
+               <td>
+                   {{insuranceName}}
+                   <input type="hidden" name="vehicle[insuranceCode]" value="{{insuranceCode}}">
+                   <input type="hidden" name="vehicle[selected]" value="{{selected}}">
+               </td>
+               <td>
+                   {{#if options}}
+                   <select name="vehicle[amount]" id="" data-amount="{{amount}}" class="compare">
+                       {{#each options}}
+                       <option value="{{key}}" {{selInsurance selected}} data-default={{default}}>{{value}}</option>
+                       {{/each}}
+                   </select>
+                   {{else}}
+                   <select name="vehicle[amount]" id="">
+                       <option value="0" data-nth="0">不投保</option>
+                       <option value="10" data-nth="1" {{selInsurance selected}}>投保</option>
+                   </select>
+                   {{/if}}
+               </td>
+               <td>
+                   &nbsp;
+               </td>
+               <td>
+                   <label for="exempt{{insuranceCode}}" class="{{support supportExempt}}">
+                       不计免赔
+                       <input type="checkbox" name="" id="exempt{{insuranceCode}}" {{checked exempt}} {{disable selected}} value="{{exempt}}">
+                       <input type="hidden" name="vehicle[][exempt]"  value="{{exempt}}">
+                   </label>
+               </td>
+           </tr>
+           {{/with}}
+            {{#each primary}}
+            <tr class="insurance">
+                <td>
+                     {{insuranceName}}
+                    <input type="hidden" name="primary[][insuranceCode]" value="{{insuranceCode}}">
+                    <input type="hidden" name="primary[][selected]" value="{{selected}}">
+                </td>
+                <td>
+                    {{#if options}}
+                        <select name="primary[][amount]" id="" data-amount="{{amount}}" class="compare">
+                            {{#each options}}
+                                <option value="{{key}}" {{selInsurance selected}} data-default={{default}}>{{value}}</option>
+                            {{/each}}
+                        </select>
+                        {{else}}
+                        <select name="primary[][amount]" id="">
+                            <option value="0" data-nth="0">不投保</option>
+                            <option value="10" data-nth="1" {{selInsurance selected}}>投保</option>
+                        </select>
+                    {{/if}}
+                </td>
+                <td>
+                       &nbsp;
+                </td>
+                <td>
+                    <label for="exempt{{insuranceCode}}" class="{{support supportExempt}}">
+                        不计免赔
+                        <input type="checkbox" name="" id="exempt{{insuranceCode}}" {{checked exempt}} {{disable selected}} value="{{exempt}}">
+                        <input type="hidden" name="primary[][exempt]"  value="{{exempt}}">
+                    </label>
+                </td>
+            </tr>
+            {{/each}}
+            {{#each additional}}
+            <tr class="additional insurance">
+                <td>
+                    {{insuranceName}}
+                    <input type="hidden" name="additional[][insuranceCode]" value="{{insuranceCode}}">
+                    <input type="hidden" name="additional[][selected]" value="{{selected}}">
+                </td>
+                <td>
+                    {{#if options}}
+                    <select name="additional[][amount]" id="" class="compare" data-amount="{{amount}}">
+                        {{#each options}}
+                        <option value="{{key}}" {{selInsurance selected}} data-default={{default}}>{{value}}</option>
+                        {{/each}}
+                    </select>
+                    {{else}}
+                    <select name="additional[][amount]" id="">
+                        <option value="0" data-nth="0">不投保</option>
+                        <option value="10" data-nth="1" {{selInsurance selected}}>投保</option>
+                    </select>
+                    {{/if}}
+                </td>
+                <td>
+                   &nbsp;
+                </td>
+                <td>
+                    <label for="exempt{{insuranceCode}}" class="{{support supportExempt}}">
+                        不计免赔
+                        <input type="checkbox" name="" id="exempt{{insuranceCode}}" {{checked exempt}} {{disable selected}}>
+                        <input type="hidden" name="additional[][exempt]"  value="{{exempt}}">
+                    </label>
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+    {{/with}}
+
+</script>
+<script type="text/x-handlebars-template" id="priceList">
+    {{#with this}}
+    <thead style="background: #d9eaff">
+    <td width="30%">车险种类</td>
+    <td width="22%">保额</td>
+    <td width="23%">保费</td>
+    <td width="25%">不计免赔</td>
+    </thead>
+    <tbody>
+    {{#with vehicle}}
+    <tr class="insurance">
+        <td>
+            {{insuranceName}}
+        </td>
+        <td>
+            {{vamount amount }}
+
+        </td>
+        <td>
+            {{vprice price}}
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    {{/with}}
+    {{#each primary}}
+    <tr class="insurance">
+        <td>
+            {{insuranceName}}
+        </td>
+        <td>
+            {{Iamount amount selected}}
+        </td>
+        <td>
+            {{oprice price}}
+        </td>
+        <td>
+            {{exemptP exemptPrice}}
+        </td>
+    </tr>
+    {{/each}}
+    {{#each additional}}
+    <tr class="additional insurance">
+        <td>
+            {{insuranceName}}
+        </td>
+        <td>
+            {{Iamount amount selected}}
+        </td>
+        <td>
+            {{oprice price}}
+        </td>
+        <td>
+            {{exemptP exemptPrice}}
+        </td>
+    </tr>
+    {{/each}}
+    {{#with totalPrice}}
+    <tr style="background:#fff;">
+        <td colspan="4" style="border-top:0;">
+            <span style="font-size:16px;font-weight:600;">商业险合计：</span>
+            {{businessTotalPrice}}
+        </td>
+    </tr>
+    <tr style="background:#fff;font-size:12px;">
+        <td colspan="4" style="border-top:0;">
+            <span style="font-size:16px;font-weight:600;">交强险合计：</span>
+            {{vprice vehicleTotalPrice}};
+            <span style="font-size:12px;">&nbsp;&nbsp;交强险保费：</span>
+            {{vprice vehiclePrice}};
+            <span style="font-size:12px;">&nbsp;&nbsp;车船税：</span>
+            {{vprice taxPrice}}
+        </td>
+    </tr>
+    {{/with}}
+    <tr style="background:#fff;">
+        <td colspan="2" style="border-top:0;">
+            <span style="font-size:16px;font-weight:600;">车险总额：</span>
+            <span id="totalPremium">
+                {{totalPremium}}
+            </span>
+        </td>
+        <td colspan="2" style="border-top:0;">
+            <span style="font-size:16px;color:red;font-weight:600;">优惠价</span>
+            <span id="rate"></span>
+        </td>
+    </tr>
+    </tbody>
+    {{/with}}
+</script>
+<script src="js/baojia.js"></script>
+</body>
+</html>

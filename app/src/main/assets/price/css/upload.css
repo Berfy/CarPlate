@@ -1,0 +1,227 @@
+.uploadList li {
+    border-bottom: 1px solid #eae9e8;
+    padding: .2rem .4rem;
+}
+
+.uploadList li dd {
+    height: 1.3rem;
+    isplay: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -o-box;
+    /*横向两端对齐*/
+    -moz-box-pack: justify;
+    -webkit-box-pack: justify;
+    /*垂直居中*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+.uploadList li dd span {
+    display: block;
+    font-size: .36rem;
+    color: #393939;
+}
+
+.uploadList li dd em {
+    display: block;
+    color: #9fa0a0;
+    font-size: .33rem;
+    background: url("../../img/right.png") no-repeat right;
+    background-size: auto .45rem;
+    padding-right: .5rem;
+}
+
+.uploadList li dt {
+    text-align: right;
+}
+
+.uploadList li dt img {
+    width: 2.125rem;
+    margin-bottom: .13rem;
+}
+
+.uploadList_photo img {
+    height: 1.33rem;
+}
+
+.uploadList_photo img {
+    height: 1.58rem;
+}
+
+/*uploadId*/
+.uploadId1_btn {
+    background: url("../../img/idFront.png");
+}
+
+.uploadId2_btn {
+    background: url("../../img/idBack.png");
+}
+
+.uploadId1_btn, .uploadId2_btn {
+    width: 5rem;
+    height: 3.2rem;
+    background-size: 5rem;
+    display: block;
+}
+
+.uploadId_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5rem;
+    height: 3.2rem;
+}
+
+.uploadId_title {
+    text-align: center;
+    color: #333;
+    font-size: .37rem;
+    padding: .14rem 0 0;
+    line-height: 1rem;
+}
+
+.uploadId_title em {
+    color: #b81c22;
+}
+
+.uploadId_box {
+    position: relative;
+    margin: 0 auto .3rem;
+    width: 5rem;
+}
+
+.uploadId_alert {
+    text-align: center;
+    margin-bottom: 2.3rem;
+}
+
+.uploadId_alert img {
+    width: 9.2rem;
+}
+
+.uploadId_btn {
+    margin: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.uploadId_btn input {
+    width: 4.6rem;
+}
+
+.uploadId {
+    background: #e7e7e7;
+    padding-bottom: .42rem;
+}
+
+.billTitle {
+    isplay: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -o-box;
+    /*横向两端对齐*/
+    -moz-box-pack: justify;
+    -webkit-box-pack: justify;
+    /*垂直居中*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    height: 1.125rem;
+    margin: 0 .14rem .39rem;
+    border-bottom: 1px solid #ecebea;
+    padding: 0 .36rem;
+    font-size: .33rem;
+}
+
+.billTitle span {
+    display: block;
+}
+
+.billTitle a {
+    display: block;
+    background: url("../../img/right.png") no-repeat right;
+    background-size: auto .45rem;
+    padding-right: .5rem;
+    color: #9fa0a0;
+}
+
+/*uploadId_demand*/
+.uploadId_demand {
+    color: #393939;
+}
+
+.uploadId_demand h3 {
+    padding: 1.4rem 0 .6rem;
+    font-size: .45rem;
+    text-align: center;
+    border-bottom: 1px solid #ecebea;
+    margin: 0 .4rem;
+}
+
+.uploadId_demand ul {
+    padding: .74rem .4rem 5rem;
+    font-size: .36rem;
+    line-height: .7rem;
+}
+
+.close {
+    display: block;
+    width: .49rem;
+    height: .49rem;
+    background: url("../../img/close.png");
+    margin: 0 auto;
+    background-size: .49rem;
+}
+
+/*leftFront*/
+.uploadList input[type=file] {
+    display: none;
+}
+
+.uploadList_id {
+    display: none;
+}
+
+.uploadList_id img {
+    width: 2.125rem;
+    height: 1.3rem
+}
+
+.uploadList_id input {
+    display: block;
+    background: #f13b37;
+    color: #fff;
+    padding: 0 .5rem;
+}
+
+a:link {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.error {
+    text-align: center;
+    line-height: 1rem;
+    width: 50vw;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.36rem;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    margin-left: -25vw;
+}

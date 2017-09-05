@@ -1,0 +1,22 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+
+    //################################# 版本号 #################################
+    //Android
+    buildToolsVersion = "26.0.0"
+    minSdkVersion = 14
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    javaVersion = JavaVersion.VERSION_1_8
+    //################################# APP版本 #################################
+    applicationId = 'com.wlb.pndecoder'
+    versionCode = 10000
+    versionName = "1.0.0"
+    testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+    testApplicationId = 'com.wlb.agent.test'
+}

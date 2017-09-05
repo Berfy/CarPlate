@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>报价</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="css/price.css" type="text/css"/>
+    <script src="js/flexible.js"></script>
+    <style>
+        .alter {
+            color: #000;
+            text-align: center;
+            width: 7rem;
+            height: 4rem;
+            position: fixed;
+            box-sizing: border-box;
+            padding: 1rem 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            margin: auto;
+            display: none;
+            background: rgba(255,255,255,1);
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body class="bgWhite">
+<div class="priceTop">
+    <dl>
+        <dd><img src="" id="carLogoUrl"></dd>
+        <dt>
+        <h3 id="licenseNo"></h3>
+        <p id="showText"></p>
+        </dt>
+    </dl>
+    <dl>
+        <dd>险种选择</dd>
+        <dt>
+        <p class="insuranceName">
+        </p>
+        </dt>
+    </dl>
+    <dl>
+        <dd>起保日期</dd>
+        <dt>
+        <p>交强险 <span class="v"></span></p>
+        <p>商业险 <span class="b"></span></p>
+        </dt>
+    </dl>
+</div>
+<div class="goNext btn" style="text-align: center;position: fixed;bottom: 0;width: 100vw;height: 1rem;line-height: 1rem">
+    立即购买
+</div>
+<div class="priceList">
+    <div id="loading" style="padding:0 5vw;font-size: 0.58rem;font-weight: 600;color: #f39801;">正在报价中……</div>
+    <ul class="cList">
+
+    </ul>
+</div>
+<!--common************************-->
+<!--errorMsg-->
+<div class="errorMsg">
+    <div></div>
+</div>
+<!--nothing-->
+<div class="nothing">
+    <img src="img/carIco.png">
+    <p>暂无数据</p>
+</div>
+<!--loading-->
+<div class="loadings"></div>
+<div class="boxW">
+    <div class="date">
+        <h4>请确认保险起保日</h4>
+        <p class="p_left_30">
+            <span style="margin-right: 1.2rem">交强险起保日期</span>
+            <input class="V" readonly type="date" style="background: #fff">
+        </p>
+        <p class="p_left_30 clander">
+            <label style="margin-right: 1.2rem" for="B">商业险起保日期</label>
+            <input type="date" class="B" id="B" style="background: #fff;" readonly>
+        </p>
+        <span class="tips">
+            请核对并正确填写保险起止日期
+        </span>
+        <div class="btn" id="dateCheck">
+            确认
+        </div>
+    </div>
+</div>
+<div class="alter">
+    <p>由于商业险起保日期变更为<span class="alertDate"></span></p>
+    <p>系统为您重新获取最新报价……请稍后</p>
+</div>
+<!--common结束************************-->
+<script src="js/server.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+<script src="js/md5.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/wlbrequest.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/price.js"></script>
+</body>
+</html>

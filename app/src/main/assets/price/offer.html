@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>查价</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/offer.css"/>   
+    <script src="js/flexible.js"></script>
+</head>
+<body>
+<main style="top:0;position:fixed;bottom: 0;width:100%;overflow:scroll;">
+    <!--隐藏域-->
+    <header class="clear hidden">
+        <div class="logo fl">
+            <img src="" alt="" id="carLogoUrl"/>
+        </div>
+        <aside class="fl">
+            <h4><span class="city" id="Num" style="margin-left: 10px;"></span></h4>
+            <p class="detail" id="showText">
+
+            </p>
+        </aside>
+    </header>
+    <!--表单-->
+    <!--<div class="licenseNo">
+
+    </div>-->
+    <form id="po" action="" method="post" onsubmit="window.location.href='price.html'">
+        <input type="hidden" name="vehicleId" id="vehicleId" value="" readonly="readonly"/>
+        <input type="hidden" name="regionCode" id="regionCode" value="" readonly="readonly"/>
+        <label for="Bdeadline" class="clear" style="display:block;width: 100%;height: 40px">
+            <span class="fl" style="display: inline-block;height: 100%;line-height: 40px">
+                商业险截止日期
+            </span>
+            <input type="date" name="businessExpiredDateStr" id="Bdeadline" value="" style="width: 70%;height:100%;line-height: 40px; padding-left: 20px;box-sizing: border-box;float: right">
+        </label>
+        <label for="Adeadline" style="display:block;width: 100%;height: 40px;" class="clear">
+            <span class="fl" style="display: inline-block;height: 100%;line-height: 40px">
+                交强险截止日期
+            </span>
+            <input type="date" name="vehicleExpiredDateStr" id="Adeadline" value="" style="width: 70%;height: 100%;line-height: 40px;padding-left: 20px;box-sizing: border-box;float: right">
+        </label>
+
+
+        <!--套餐选择-->
+        <input type="hidden" name="package_type" id="package_type" value="A"/>
+        <!--保险-->
+        <div class="insure">
+            <div class="in_detail clear">
+                <div class="hav_s fl">
+                    已选险种<span id="s_num">1</span>种
+                </div>
+            </div>
+            <div class="in_wrap" style="padding-bottom: 13vw;">
+
+            </div>
+        </div>
+    </form>
+</main>
+<input type="button" class="btn_space" id="btn_space" value="报价"/>
+<!--common************************-->
+<!--errorMsg-->
+<div class="errorMsg">
+    <div></div>
+</div>
+<!--nothing-->
+<div class="nothing">
+    <img src="img/carIco.png">
+    <p>暂无数据</p>
+</div>
+<div class="o">
+    <div class="er">
+        <span>此险为车损的附加险，请投保车损险再选择此险!</span>
+        <p class="click">
+            确定
+        </p>
+    </div>
+</div>
+<input type="text" id="text1" val="">
+<!--loading-->
+<div class="loadings"></div>
+<!--common结束************************-->
+<script src="js/jquery.js"></script>
+<script src="js/server.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/wlbrequest.js"></script>
+<script src="js/timeFormat.js"></script>
+<script src="js/jquery.serializejson.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/offer.js"></script>
+</body>
+</html>

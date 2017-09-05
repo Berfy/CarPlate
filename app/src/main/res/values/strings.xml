@@ -1,4 +1,33 @@
 <resources>
-    <string name="app_name">PlateRecognizer</string>
-    <string name="plate_rect">车牌识别区</string>
+    <!--首页-->
+    <string name="app_name">WLB扫一扫</string>
+    <string name="title_takephoto">扫一扫</string>
+    <string name="title_voice">语音</string>
+    <string name="title_image">图片</string>
+    <string name="title_login">登录</string>
+    <string name="title_logout">退出登录</string>
+    <string name="edit_en">QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789</string>
+
+    <!--设置-->
+    <string name="title_setting">设置</string>
+    <string name="title_histroy">历史车辆</string>
+    <string name="title_search">搜索</string>
+    <string name="title_price_set">费率设置</string>
+    <string name="title_choose_image">选择图片</string>
+    <string name="title_intro">报价</string>
+    <string name="title_edit_hint">请输入车牌号(7座以下)</string>
+    <string name="hint_phone"> 请输入手机号</string>
+    <string name="hint_search"> 请输入车牌号搜索</string>
+    <string name="hint_price_percent"> 请输入费率</string>
+    <string name="tip_phone"> 请输入正确的手机号</string>
+    <string name="tip_login_permission"> 您没有权限</string>
+    <string name="tip_price_percent"> 费率范围0-99</string>
+    <string name="title_ok">确定</string>
+    <string name="title_cancel">取消</string>
+
+    <!--选择照片-->
+    <string name="preview">预览</string>
+    <string name="folder_all">所有照片</string>
+    <string name="msg_no_camera">没有系统相机</string>
+    <string name="msg_amount_limit">已经达到最高选择数量</string>
 </resources>

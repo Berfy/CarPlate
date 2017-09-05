@@ -1,0 +1,327 @@
+.priceTop dl {
+    border-bottom: 1px solid #eae9e8;
+    margin: 0 .2rem;
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -o-box;
+    /*垂直居中*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    padding: 0 .3rem;
+}
+
+
+.priceTop dl dd {
+    width: 1.67rem;
+    margin-right: .25rem;
+    font-size: .36rem;
+    color: #393939;
+}
+
+.priceTop dl dd img {
+    width: 1.67rem;
+    height: 1.67rem;
+}
+
+.priceTop dl dt {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    padding: .125rem 0;
+}
+
+.priceTop dl dt h3 {
+    font-size: .36rem;
+    color: #3a3a3a;
+    margin-bottom: .125rem;
+}
+
+.priceTop dl dt p {
+    color: #727171;
+    font-size: .32rem;
+    line-height: .58rem;
+}
+
+/*priceList*/
+.priceList {
+    border-top: 10px solid #f5f5f5;
+    padding: 0 0  1rem 0;
+}
+.priceShare dd{
+    padding: .8rem 0 !important;
+}
+.priceShare dt{
+    padding: .43rem 0 .2rem .53rem !important;
+}
+.priceList_line {
+    background: #fff;
+    margin-top: .125rem;
+    -webkit-box-pack: justify;
+    box-pack: justify;
+    border-bottom:1px solid #f5f5f5;
+
+}
+
+.priceList_line:first-child {
+    margin: 0;
+}
+
+.priceList_line dl {
+    background:url('../img/nn.png') 95% center no-repeat;
+    background-size: 15px 15px;
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -o-box;
+    /*垂直居中*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    padding: 0 .42rem;
+}
+.ty{
+    background:url('../img/c.png') 95% center no-repeat !important;
+    background-size: 15px 15px !important;
+}
+.priceList_line dl dd {
+    width: 1.92rem;
+    box-sizing: border-box;
+    margin: .1rem 0;
+    padding: .33rem 0;
+}
+
+.exempt_name {
+    display: inline-block !important;
+    padding: 0 !important;
+}
+
+.exempt_name dt {
+    padding: 0 !important;
+}
+
+.exempt_name dd {
+    border-right: 0 !important;
+    padding: 0 !important;
+    color: #a0a0a0 !important;
+    font-size: 0.33rem;
+    width: auto !important;
+}
+
+.priceList_line dl dd img {
+    height: 0.8rem;
+}
+
+.priceList_line dl dt {
+    padding: .43rem 0 .43rem .53rem;
+}
+
+.priceList_line dl dt h3 {
+    font-size: .39rem;
+    color: #f13b37;
+    margin-bottom: .28rem;
+    padding-left:0.5rem;
+}
+
+.priceList_line dl dt h3 span {
+    font-size: .36rem;
+    color: #393939;
+    font-weight: normal;
+    padding-right:.39rem;
+}
+
+.priceList_line a {
+    display: inline-block;
+    height: .83rem;
+    border: 1px solid #f13b37;
+    color: #fff;
+    font-size: .36rem;
+    border-radius: 4px;
+    line-height: .83rem;
+    padding: 0 .47rem;
+    text-decoration: none;
+    background:#f13b37 ;
+}
+
+.btnBlue {
+    color: #3cb6ef !important;
+    border: 1px solid #3cb6ef !important;
+    margin-left: .375rem;
+}
+
+.priceList_info {
+    background: #fffafa;
+
+}
+
+.priceList_info ul {
+    border-bottom: 1px solid #e8e7e1;
+
+}
+
+.priceList_info li {
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -o-box;
+    /*垂直居中*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    /*两端对齐*/
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    border-top: 1px solid #e8e7e1;
+    padding: .375rem .42rem;
+    font-size: .36rem;
+    color: #393939
+}
+
+.priceList_info li span {
+    display: block;
+}
+
+.priceList_info li span:last-child {
+    width: 2.4rem;
+    text-align: center;
+}
+
+.priceList_info li span:first-child {
+    width: 4rem;
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -o-box;
+    /*垂直居中*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+.priceList_info li span:nth-child(2) {
+    width: 2.4rem;
+    text-align: right;
+    text-align: center;
+}
+
+.priceList_info li span em {
+    display: block;
+    background: #f39801;
+    color: #fff;
+    padding: .2rem;
+    border-radius: 4px;
+    margin-right: .2rem;
+}
+
+.priceList_info li span i {
+    display: block;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    font-style: normal;
+    line-height: .5rem;
+}
+
+.priceList_Btn {
+    text-align: center;
+    padding-top: .78rem;
+}
+
+.priceList_copy {
+    text-align: center;
+    color: #727171;
+    font-size: .33rem;
+    padding: .42rem .42rem;
+    line-height: .5rem;
+}
+/*日期弹出框*/
+.boxW{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.date{
+    margin: 4.5rem auto;
+    width: 9.16rem;
+    height: 5.55rem;
+    background: #fff;
+    border-radius: 10px;
+}
+.date h4{
+    height: 1.11rem;
+    background: #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 10px 10px 0 0;
+}
+.date p{
+    height: 1.11rem;
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 1.11rem;
+    box-sizing: border-box;
+}
+.date .clander{
+    background: url("../img/calendar.png") no-repeat 90% center;
+    background-size: 0.416rem 0.416rem;
+}
+.date h4{
+    line-height: 1.11rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.39rem;
+}
+.date .btn{
+    width: 4.16rem;
+    margin: 0.2rem auto;
+    height: .83rem;
+    border: 1px solid #f13b37;
+    color: #fff;
+    font-size: .36rem;
+    border-radius: 4px;
+    line-height: .83rem;
+    padding: 0 .6rem;
+    text-align: center;
+}
+.date .tips{
+    margin-top: 0.1rem;
+    height: auto;
+    font-size: 0.33rem;
+    color: #a7a7a7;
+    line-height: 0.7rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.alter{
+    color: #000;
+    text-align: center;
+    width:7rem;
+    height: 4rem;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 1rem 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+    background: rgba(255,255,255,1);
+    border: 1px solid #000;
+}
+.alter p{
+    width: 100%;
+    font-size: 0.33rem;
+    line-height: 1rem;
+    text-align: center;
+}

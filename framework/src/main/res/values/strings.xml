@@ -1,0 +1,38 @@
+<resources>
+    <!--提示-->
+    <string name="request_error">没有数据</string>
+    <string name="title_back">返回</string>
+    <string name="request_network_error">网络错误, 请确保你的手机已联网</string>
+    <!-- 提示-权限 -->
+    <string name="tip_permission_sd"> \"SD卡读写/存储权限\" </string>
+    <string name="tip_permission_camera"> \"相机权限\" </string>
+    <string name="tip_permission_callphone"> \"拨打电话/电话权限\" </string>
+    <string name="tip_permission_phone_info"> \"读取设备信息/电话权限\" </string>
+    <string name="tip_permission_gps"> \"获取GPS定位权限\" </string>
+    <string name="tip_permission_wifi"> \"获取WIFI状态权限\" </string>
+    <string name="tip_permission_contact"> \"读取联系人信息权限\" </string>
+    <string name="tip_permission_sms"> \"读取短信信息权限\" </string>
+    <string name="tip_permission_need">已被禁用，App运行需要此权限，即将为您跳转到应用页面，请点击 \"权限管理/权限\" 打开指定权限或信任此应用。</string>
+    <string name="tip_permission_audio"> \"录音（麦克风）权限\" </string>
+    <string name="msg_no_camera">没有系统相机</string>
+    <string name="tip_mobile_error">请输入正确的手机号</string>
+    <string name="tip_mobile_null">请输入手机号</string>
+    <string name="tip_newmobile_null">请输入新手机号</string>
+    <string name="tip_pwd_null">请输入密码</string>
+    <string name="tip_code_get_null">请先获取验证码</string>
+    <string name="tip_code_guoqi">验证码已过期</string>
+    <string name="tip_code_null">请输入验证码</string>
+    <string name="tip_code_error">验证码不正确</string>
+    <string name="tip_tologin">您还没有登录，请登录。</string>
+    <string name="tip_mobile_code_null">请输入获取验证码的手机号</string>
+    <string name="tip_no_more_result_data">没有更多内容</string>
+    <string name="loading">加载中....</string>
+    <string name="tip_choose_file_error">选择文件错误</string>
+
+    <string name="login_tip_code_send">已发送</string>
+
+    <!--下拉刷新-->
+    <string name="refreshing_text">正在刷新....</string>
+    <string name="refresh_down_text">下拉刷新</string>
+    <string name="refresh_release_text">松开可刷新</string>
+</resources>

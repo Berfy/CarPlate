@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.wlb.pndecoder.view.TitleBar
+        android:id="@id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"></com.wlb.pndecoder.view.TitleBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_price_percent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/hint_price_percent"
+            android:textColorHint="@color/c0c0c0"
+            android:inputType="number"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_btn_selector"
+            android:text="@string/title_ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+    </RelativeLayout>
+</LinearLayout>
