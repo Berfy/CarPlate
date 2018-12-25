@@ -36,7 +36,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.utils.AppUtil;
 import cn.berfy.framework.utils.Camera2Util;
@@ -48,15 +48,15 @@ import cn.berfy.framework.utils.ViewUtils;
 
 public class CameraActivity extends BaseActivity {
 
-    @Bind(R.id.svCamera)
+    @BindView(R.id.svCamera)
     SurfaceView mSvCamera;
-    @Bind(R.id.ivPlateRect)
+    @BindView(R.id.ivPlateRect)
     ImageView mIvPlateRect;
-    @Bind(R.id.titleBar)
+    @BindView(R.id.titleBar)
     TitleBar mTitleBar;
-    @Bind(R.id.tv_tip)
+    @BindView(R.id.tv_tip)
     TextView mTvTip;
-    @Bind(R.id.toggle_btn)
+    @BindView(R.id.toggle_btn)
     ToggleButton mTgBtn;
     Camera2BasicFragment mCamera2BasicFragment;
     private int num;

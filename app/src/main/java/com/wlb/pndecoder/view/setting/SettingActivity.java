@@ -11,7 +11,7 @@ import com.wlb.pndecoder.utils.PopupWindowUtil;
 import com.wlb.pndecoder.view.TitleBar;
 import com.wlb.pndecoder.view.login.LoginActivity;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.base.BasePopupWindowUtil;
 import cn.berfy.framework.cache.TempSharedData;
@@ -23,15 +23,15 @@ import cn.berfy.framework.manager.ActivityManager;
 
 public class SettingActivity extends BaseActivity {
 
-    @Bind(R.id.titleBar)
+    @BindView(R.id.titleBar)
     TitleBar mTitleBar;
-    @Bind(R.id.tv_histroy)
+    @BindView(R.id.tv_histroy)
     TextView mTvHistroy;
-    @Bind(R.id.tv_search)
+    @BindView(R.id.tv_search)
     TextView mTvSearch;
-    @Bind(R.id.tv_price_set)
+    @BindView(R.id.tv_price_set)
     TextView mTvPriceSet;
-    @Bind(R.id.btn_logout)
+    @BindView(R.id.btn_logout)
     Button mBtnLogout;
     private PopupWindowUtil mPopupWindowUtil;
 

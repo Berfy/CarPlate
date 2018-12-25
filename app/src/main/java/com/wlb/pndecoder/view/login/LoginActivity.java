@@ -1,5 +1,6 @@
 package com.wlb.pndecoder.view.login;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,15 +14,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hjq.permissions.OnPermission;
+import com.hjq.permissions.XXPermissions;
 import com.wlb.pndecoder.R;
 import com.wlb.pndecoder.db.TabUser;
 import com.wlb.pndecoder.model.User;
 import com.wlb.pndecoder.view.MainActivity;
 
-import butterknife.Bind;
+import java.util.List;
+
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.cache.TempSharedData;
 import cn.berfy.framework.utils.CheckUtil;
+import cn.berfy.framework.utils.GsonUtil;
 import cn.berfy.framework.utils.TimeUtil;
 import cn.berfy.framework.utils.ToastUtil;
 
@@ -31,9 +37,9 @@ import cn.berfy.framework.utils.ToastUtil;
 
 public class LoginActivity extends BaseActivity {
 
-    @Bind(R.id.edit_phone)
+    @BindView(R.id.edit_phone)
     EditText mEditPhone;
-    @Bind(R.id.btn_login)
+    @BindView(R.id.btn_login)
     Button mBntLogin;
     private String mPhone;
 
@@ -54,6 +60,23 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void initVariable() {
+        XXPermissions.with(this)
+                .permission(
+                        android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+                        , android.Manifest.permission.READ_PHONE_STATE
+                        , Manifest.permission.CAMERA
+                        , Manifest.permission.RECORD_AUDIO
+                ).request(new OnPermission() {
+            @Override
+            public void hasPermission(List<String> granted, boolean isAll) {
+            }
+
+            @Override
+            public void noPermission(List<String> denied, boolean quick) {
+                ToastUtil.getInstance().showToast("你拒绝了" + GsonUtil.getInstance().toJson(denied) + "权限");
+                XXPermissions.gotoPermissionSettings(mContext);
+            }
+        });
         User user = new User();
         user.setName("翟总");
         user.setPhone("18600673775");

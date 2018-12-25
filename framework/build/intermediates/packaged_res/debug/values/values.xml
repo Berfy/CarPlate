@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="gray">#eaeaea</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="translate_black">#20000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="white">#ffffff</color>
+    <declare-styleable name="RoundImageView">
+        <attr format="integer" name="borderRadius"/>
+        <attr name="type">
+            <enum name="circle" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr format="reference" name="viewAbove"/>
+        <attr format="reference" name="viewBehind"/>
+        <attr format="dimension" name="behindOffset"/>
+        <attr format="dimension" name="behindWidth"/>
+        <attr format="float" name="behindScrollScale"/>
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+        <attr format="reference" name="shadowDrawable"/>
+        <attr format="dimension" name="shadowWidth"/>
+        <attr format="boolean" name="fadeEnabled"/>
+        <attr format="float" name="fadeDegree"/>
+        <attr format="boolean" name="selectorEnabled"/>
+        <attr format="reference" name="selectorDrawable"/>
+    </declare-styleable>
+    <declare-styleable name="dashLine">
+        <attr format="color" name="dash_color"/>
+    </declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="encode_failed" type="id"/>
+    <item name="encode_succeeded" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="search_book_contents_failed" type="id"/>
+    <item name="search_book_contents_succeeded" type="id"/>
+    <item name="selected_view" type="id"/>
+    <string name="loading">加载中....</string>
+    <string name="login_tip_code_send">已发送</string>
+    <string name="msg_no_camera">没有系统相机</string>
+    <string name="refresh_down_text">下拉刷新</string>
+    <string name="refresh_release_text">松开可刷新</string>
+    <string name="refreshing_text">正在刷新....</string>
+    <string name="request_error">没有数据</string>
+    <string name="request_network_error">网络错误, 请确保你的手机已联网</string>
+    <string name="tip_choose_file_error">选择文件错误</string>
+    <string name="tip_code_error">验证码不正确</string>
+    <string name="tip_code_get_null">请先获取验证码</string>
+    <string name="tip_code_guoqi">验证码已过期</string>
+    <string name="tip_code_null">请输入验证码</string>
+    <string name="tip_mobile_code_null">请输入获取验证码的手机号</string>
+    <string name="tip_mobile_error">请输入正确的手机号</string>
+    <string name="tip_mobile_null">请输入手机号</string>
+    <string name="tip_newmobile_null">请输入新手机号</string>
+    <string name="tip_no_more_result_data">没有更多内容</string>
+    <string name="tip_permission_audio"> \"录音（麦克风）权限\" </string>
+    <string name="tip_permission_callphone"> \"拨打电话/电话权限\" </string>
+    <string name="tip_permission_camera"> \"相机权限\" </string>
+    <string name="tip_permission_contact"> \"读取联系人信息权限\" </string>
+    <string name="tip_permission_gps"> \"获取GPS定位权限\" </string>
+    <string name="tip_permission_need">已被禁用，App运行需要此权限，即将为您跳转到应用页面，请点击 \"权限管理/权限\" 打开指定权限或信任此应用。</string>
+    <string name="tip_permission_phone_info"> \"读取设备信息/电话权限\" </string>
+    <string name="tip_permission_sd"> \"SD卡读写/存储权限\" </string>
+    <string name="tip_permission_sms"> \"读取短信信息权限\" </string>
+    <string name="tip_permission_wifi"> \"获取WIFI状态权限\" </string>
+    <string name="tip_pwd_null">请输入密码</string>
+    <string name="tip_tologin">您还没有登录，请登录。</string>
+    <string name="title_back">返回</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

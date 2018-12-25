@@ -22,7 +22,7 @@ import com.wlb.pndecoder.db.histroy.TabHistroy;
 import com.wlb.pndecoder.view.TitleBar;
 import com.wlb.pndecoder.view.look.IWebViewActivity;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.cache.TempSharedData;
 
@@ -32,11 +32,11 @@ import cn.berfy.framework.cache.TempSharedData;
 
 public class SearchingActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
-    @Bind(R.id.titleBar)
+    @BindView(R.id.titleBar)
     TitleBar mTitleBar;
-    @Bind(R.id.listView)
+    @BindView(R.id.listView)
     ListView mListView;
-    @Bind(R.id.edit_search)
+    @BindView(R.id.edit_search)
     EditText mEditSearch;
     private HistroyListAdapter mAdapter;
     private String mKey;

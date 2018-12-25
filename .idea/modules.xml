@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PNDecoder.iml" filepath="$PROJECT_DIR$/PNDecoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarPlate.iml" filepath="$PROJECT_DIR$/CarPlate.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/framework/framework.iml" filepath="$PROJECT_DIR$/framework/framework.iml" />
       <module fileurl="file://$PROJECT_DIR$/pr/pr.iml" filepath="$PROJECT_DIR$/pr/pr.iml" />

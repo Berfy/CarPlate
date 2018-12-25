@@ -36,7 +36,7 @@ import com.wlb.pndecoder.view.setting.SettingActivity;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.cache.TempSharedData;
 import cn.berfy.framework.utils.CheckUtil;
@@ -48,19 +48,19 @@ import cn.berfy.framework.utils.ToastUtil;
 public class MainActivity extends BaseActivity implements RecognitionListener {
 
     private final String TAG = "MainActivity";
-    @Bind(R.id.tv_setting)
+    @BindView(R.id.tv_setting)
     TextView mTvSetting;
-    @Bind(R.id.btn_takephoto)
+    @BindView(R.id.btn_takephoto)
     TextView mTvTakePhoto;
-    @Bind(R.id.btn_voice)
+    @BindView(R.id.btn_voice)
     TextView mTvVoice;
-    @Bind(R.id.btn_image)
+    @BindView(R.id.btn_image)
     TextView mTvImage;
-    @Bind(R.id.btn_intro)
+    @BindView(R.id.btn_intro)
     TextView mTvIntro;
-    @Bind(R.id.edit_result)
+    @BindView(R.id.edit_result)
     EditText mEditResult;
-    @Bind(R.id.tv_province)
+    @BindView(R.id.tv_province)
     TextView mTvProvince;
     View mSpeechTips, mSpeechWave;
     private SpeechRecognizer mSpeechRecognizer;

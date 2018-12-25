@@ -11,14 +11,14 @@ import com.wlb.pndecoder.view.TitleBar;
 import java.io.File;
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.utils.LogUtil;
 
 public class SelectorActivity extends BaseActivity implements
         MultiImageSelectorFragment.Callback {
 
-    @Bind(R.id.titleBar)
+    @BindView(R.id.titleBar)
     TitleBar mTitleBar;
     private final String TAG = "SelectorActivity";
     /**

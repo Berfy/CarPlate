@@ -1,0 +1,53 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+	package
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:1-13:12
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:5:22-62
+uses-feature#android.hardware.camera
+ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:6:5-60
+	android:name
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:6:19-57
+application
+ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:8:5-11:55
+	android:icon
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml:11:9-40
+uses-sdk
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+		ADDED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml
+		INJECTED from C:\android\work\work\CarPlate\framework\src\main\AndroidManifest.xml

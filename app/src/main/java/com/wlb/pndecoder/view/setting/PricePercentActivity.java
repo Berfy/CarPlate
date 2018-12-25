@@ -12,7 +12,7 @@ import com.wlb.pndecoder.R;
 import com.wlb.pndecoder.common.Constants;
 import com.wlb.pndecoder.view.TitleBar;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.cache.TempSharedData;
 import cn.berfy.framework.utils.ToastUtil;
@@ -23,13 +23,13 @@ import cn.berfy.framework.utils.ToastUtil;
 
 public class PricePercentActivity extends BaseActivity {
 
-    @Bind(R.id.titleBar)
+    @BindView(R.id.titleBar)
     TitleBar mTitleBar;
 
-    @Bind(R.id.btn_ok)
+    @BindView(R.id.btn_ok)
     Button mBtnOk;
 
-    @Bind(R.id.edit_price_percent)
+    @BindView(R.id.edit_price_percent)
     EditText mEditPricePercent;
 
     private String mPricePercent = "22";

@@ -17,7 +17,7 @@ import com.wlb.pndecoder.R;
 import com.wlb.pndecoder.common.Constants;
 import com.wlb.pndecoder.view.TitleBar;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.berfy.framework.base.BaseActivity;
 import cn.berfy.framework.cache.TempSharedData;
 import cn.berfy.framework.support.views.AWebView;
@@ -31,9 +31,9 @@ import cn.berfy.framework.utils.LogUtil;
 public class IWebViewActivity extends BaseActivity {
 
     private final String TAG = "IWebViewActivity";
-    @Bind(R.id.webView)
+    @BindView(R.id.webView)
     AWebView mWebView;
-    @Bind(R.id.titleBar)
+    @BindView(R.id.titleBar)
     TitleBar mTitleBar;
 
     @Override

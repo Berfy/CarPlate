@@ -2,12 +2,7 @@ package com.aiseminar.platerecognizer.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.aiseminar.platerecognizer.R;
-
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class BaseActivity extends AppCompatActivity {
